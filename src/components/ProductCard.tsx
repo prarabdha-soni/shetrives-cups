@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import StarRating from "./StarRating";
 import type { Product } from "@/data/products";
 
@@ -18,7 +19,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
       style={{ animationDelay: `${index * 80}ms` }}
     >
       {/* Image */}
-      <div className="relative aspect-square bg-secondary rounded-sm overflow-hidden mb-3 cursor-pointer">
+      <Link to={`/product/${product.id}`} className="relative aspect-square bg-secondary rounded-sm overflow-hidden mb-3 cursor-pointer block">
         <img
           src={currentImage}
           alt={product.name}
@@ -29,7 +30,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
             {product.badge}
           </span>
         )}
-      </div>
+      </Link>
 
       {/* Info */}
       <h3 className="font-heading text-base font-semibold text-foreground mb-1">
