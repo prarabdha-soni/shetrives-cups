@@ -1,6 +1,6 @@
 import { Search, User, ShoppingBag } from "lucide-react";
 
-const navLinks = ["Shop All", "Period Underwear", "Cups & Discs", "Bundles", "Sale"];
+const navLinks = ["Cups", "Bestsellers"];
 
 const Header = () => {
   return (
@@ -18,7 +18,7 @@ const Header = () => {
               key={link}
               href="#"
               className={`text-sm font-medium text-foreground/80 hover:text-foreground transition-colors ${
-                link === "Cups & Discs" ? "underline underline-offset-4 decoration-foreground" : ""
+                link === "Cups" ? "underline underline-offset-4 decoration-foreground" : ""
               }`}
             >
               {link}
